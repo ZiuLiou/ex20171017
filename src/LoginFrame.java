@@ -30,8 +30,9 @@ public class LoginFrame  extends JFrame {
                                        @Override
                                        public void actionPerformed(ActionEvent e) {
                                            if (jtfID.getText().equals("104021116") && (new String(jtfPW.getPassword())).equals("19970415")) {
-                                               Mainframe mainframe = new Mainframe();
+                                               Mainframe mainframe = new Mainframe(LoginFrame.this);
                                                mainframe.setVisible(true);
+                                               LoginFrame.this.setVisible(false);
                                            } else {
                                                JOptionPane.showMessageDialog(null, "Error");
                                                System.out.println("No" + jtfID.getText() + "\tpw");
